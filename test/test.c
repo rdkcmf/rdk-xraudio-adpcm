@@ -518,6 +518,7 @@ bool adpcm_decode_test_20(adpcm_dec_t *decoder) {
 
     if((fout = fopen("data/adpcm_decode_test_20.pcm", "w")) == NULL) {
         printf("%s: failed to open output file\n", __FUNCTION__);
+        fclose(fin);
         return(false);
     }
 
